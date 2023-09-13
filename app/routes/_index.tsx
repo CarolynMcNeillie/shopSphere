@@ -20,6 +20,8 @@ export default function Homepage() {
         <PageLink url="/flowers" label="Flowers" />
         <PageLink url="/paint" label="Paint" />
         <PageLink url="/shoes" label="Shoes" />
+        <PageLink url="/plastic" label="Plastic" />
+        <PageLink url="/pop" label="Pop" />
       </ul>
     </div>
   );
