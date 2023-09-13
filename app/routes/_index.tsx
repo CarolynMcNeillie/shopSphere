@@ -20,6 +20,7 @@ export default function Homepage() {
         <PageLink url="/pop" label="Pop" />
         <PageLink url="/fabric" label="Fabric" />
         <PageLink url="/leather" label="Leather" />
+        <PageLink url="/makeup" label="Makeup" />
         <PageLink url="/flowers" label="Flowers" />
         <PageLink url="/paint" label="Paint" />
         <PageLink url="/shoes" label="Shoes" />
