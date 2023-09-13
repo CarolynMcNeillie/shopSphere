@@ -4,7 +4,9 @@ import Globe from '~/Components/Globe';
 function PageLink({url, label}: {url: string; label: string}) {
   return (
     <li>
-      <Link to={url} className="bg-[#79DFFF] px-20 py-10 inline-block m-4">{label}</Link>
+      <Link to={url} className="bg-[#79DFFF] px-20 py-10 inline-block m-4">
+        {label}
+      </Link>
     </li>
   );
 }

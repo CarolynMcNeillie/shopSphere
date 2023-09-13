@@ -1,3 +1,4 @@
+import {Link} from '@remix-run/react';
 import {useEffect, useRef} from 'react';
 import * as THREE from 'three';
 import {OrbitControls} from 'three/examples/jsm/controls/OrbitControls.js';
@@ -134,6 +135,14 @@ export default function Globe({texture}: {texture: string}) {
     tick();
   });
   return (
-    <canvas className="w-full h-full outline-none" ref={canvasRef}></canvas>
+    <>
+      <canvas className="w-full h-full outline-none" ref={canvasRef}></canvas>
+      <Link
+        to="/"
+        className="absolute z-50 top-20 left-20 bg-white px-20 py-10"
+      >
+        {'< Back'}
+      </Link>
+    </>
   );
 }
