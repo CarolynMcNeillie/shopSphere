@@ -135,7 +135,7 @@ export default function Globe({texture}: {texture: string}) {
     tick();
   });
   return (
-    <>
+    <div>
       <canvas className="w-full h-full outline-none" ref={canvasRef}></canvas>
       <Link
         to="/"
@@ -143,6 +143,6 @@ export default function Globe({texture}: {texture: string}) {
       >
         {'< Back'}
       </Link>
-    </>
+    </div>
   );
 }
