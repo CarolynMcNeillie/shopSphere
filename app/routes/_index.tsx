@@ -1,10 +1,11 @@
 import {Link} from '@remix-run/react';
+import {Phone} from '~/Components';
 import Globe from '~/Components/Globe';
 
 function PageLink({url, label}: {url: string; label: string}) {
   return (
-    <li>
-      <Link to={url} className="bg-[#79DFFF] px-20 py-10 inline-block m-4">
+    <li className="bg-[#79DFFF] inline-block m-4">
+      <Link to={url} className="px-20 py-10 block">
         {label}
       </Link>
     </li>
@@ -13,8 +14,9 @@ function PageLink({url, label}: {url: string; label: string}) {
 
 export default function Homepage() {
   return (
-    <div className="home min-h-screen flex items-center justify-center">
-      <ul>
+    <div className="home min-h-screen flex items-center justify-center flex-col">
+      <Phone />
+      <ul className="inline">
         <PageLink url="/pop" label="Pop" />
         <PageLink url="/fabric" label="Fabric" />
         <PageLink url="/leather" label="Leather" />

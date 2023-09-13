@@ -1,3 +1,4 @@
 import Globe from './Globe';
+import Phone from './Phone';
 
-export {Globe};
+export {Globe, Phone};
