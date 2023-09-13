@@ -38,7 +38,9 @@ export default function Globe() {
 
     const textureLoader = new THREE.TextureLoader(loadingManager);
 
-    const colorTexture = textureLoader.load('/textures/map3.png');
+    const colorTexture = textureLoader.load(
+      'https://cdn.shopify.com/s/files/1/0693/6274/5366/files/map3.png?v=1694632642',
+    );
     colorTexture.wrapS = THREE.MirroredRepeatWrapping;
     colorTexture.wrapT = THREE.MirroredRepeatWrapping;
     colorTexture.generateMipmaps = false;
@@ -57,24 +59,23 @@ export default function Globe() {
      * Sizes
      */
     const sizes = {
-      width: 430,
-      height: 300,
+      width: window.innerWidth,
+      height: window.innerHeight,
     };
 
-    // window.addEventListener('resize', () =>
-    // {
-    //     // Update sizes
-    //     sizes.width = window.innerWidth - 40,,
-    //     sizes.height = window.innerHeight / 4 * 3
+    window.addEventListener('resize', () => {
+      // Update sizes
+      sizes.width = window.innerWidth;
+      sizes.height = window.innerHeight;
 
-    //     // Update camera
-    //     camera.aspect = sizes.width / sizes.height
-    //     camera.updateProjectionMatrix()
+      // Update camera
+      camera.aspect = sizes.width / sizes.height;
+      camera.updateProjectionMatrix();
 
-    //     // Update renderer
-    //     renderer.setSize(sizes.width, sizes.height)
-    //     renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2))
-    // })
+      // Update renderer
+      renderer.setSize(sizes.width, sizes.height);
+      renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
+    });
 
     /**
      * Light
@@ -135,9 +136,6 @@ export default function Globe() {
     tick();
   });
   return (
-    <canvas
-      className="border-2 border-red w-500 h-500 outline-none rounded-[20px]"
-      ref={canvasRef}
-    ></canvas>
+    <canvas className="w-full h-full outline-none" ref={canvasRef}></canvas>
   );
 }
