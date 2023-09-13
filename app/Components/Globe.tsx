@@ -2,7 +2,7 @@ import {useEffect, useRef} from 'react';
 import * as THREE from 'three';
 import {OrbitControls} from 'three/examples/jsm/controls/OrbitControls.js';
 
-export default function Globe() {
+export default function Globe({texture}: {texture: string}) {
   const canvasRef = useRef<HTMLCanvasElement>(null);
 
   useEffect(() => {
@@ -38,9 +38,7 @@ export default function Globe() {
 
     const textureLoader = new THREE.TextureLoader(loadingManager);
 
-    const colorTexture = textureLoader.load(
-      'https://cdn.shopify.com/s/files/1/0693/6274/5366/files/map3.png?v=1694632642',
-    );
+    const colorTexture = textureLoader.load(texture);
     colorTexture.wrapS = THREE.MirroredRepeatWrapping;
     colorTexture.wrapT = THREE.MirroredRepeatWrapping;
     colorTexture.generateMipmaps = false;
@@ -97,8 +95,8 @@ export default function Globe() {
       100,
     );
     camera.position.x = 1;
-    camera.position.y = 1;
-    camera.position.z = 1;
+    camera.position.y = 1.2;
+    camera.position.z = 1.4;
     scene.add(camera);
 
     // Controls
