@@ -17,6 +17,7 @@ export default function Homepage() {
         <PageLink url="/leather" label="Leather" />
         <PageLink url="/flowers" label="Flowers" />
         <PageLink url="/paint" label="Paint" />
+        <PageLink url="/shoes" label="Shoes" />
       </ul>
     </div>
   );
