@@ -1,0 +1,66 @@
+/* Druk Wide */
+@font-face {
+  font-family: 'Druk';
+  src: url('https://cdn.shopify.com/s/files/1/0598/4822/8886/files/DrukWide-Bold-Web.woff2?v=1690921783')
+    format('woff2');
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+}
+
+/* Shopify sans */
+@font-face {
+  font-family: 'Shopify-sans';
+  src: url('https://cdn.shopify.com/s/files/1/0598/4822/8886/files/ShopifySans-Regular.woff2?v=1691088711')
+    format('woff2');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Shopify-sans';
+  src: url('https://cdn.shopify.com/s/files/1/0598/4822/8886/files/ShopifySans-Regular-Italic.woff2?v=1691088711')
+    format('woff2');
+  font-weight: normal;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Shopify-sans';
+  src: url('https://cdn.shopify.com/s/files/1/0598/4822/8886/files/ShopifySans--bold.woff2?v=1693340791')
+    format('woff2');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* JetBrains Mono */
+/* Note: any occurance of 400 weight in the design should be implemented as 500 weight */
+@font-face {
+  font-family: 'Jetbrains';
+  src: url('https://cdn.shopify.com/s/files/1/0598/4822/8886/files/JetBrainsMono-Medium.woff2?v=1692130908')
+    format('woff2');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Jetbrains';
+  src: url('https://cdn.shopify.com/s/files/1/0598/4822/8886/files/JetBrainsMono-Light.woff2?v=1694099260')
+    format('woff2');
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Jetbrains';
+  src: url('https://cdn.shopify.com/s/files/1/0598/4822/8886/files/JetBrainsMono-Bold.woff2?v=1692130908')
+    format('woff2');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}

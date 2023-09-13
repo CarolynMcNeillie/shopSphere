@@ -1,0 +1,228 @@
+@import './fonts.css';
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  h1 {
+    @apply title1 m-0 p-0;
+  }
+
+  h2 {
+    @apply title2 m-0 p-0;
+  }
+
+  h3 {
+    @apply title3 m-0 p-0;
+  }
+
+  h4 {
+    @apply title4 m-0 p-0;
+  }
+
+  h5 {
+    @apply title5 m-0 p-0;
+  }
+
+  h6 {
+    @apply title6 m-0 p-0;
+  }
+
+  p {
+    @apply paragraph2;
+  }
+
+  div,
+  p {
+    @apply paragraph2 m-0 p-0;
+  }
+
+  body {
+    @apply paragraph2;
+  }
+
+  p a {
+    @apply link;
+  }
+
+  code {
+    @apply code;
+  }
+
+  :root {
+    -webkit-tap-highlight-color: transparent;
+  }
+}
+
+@layer components {
+  .icon {
+    -webkit-mask-image: var(--mask-url);
+    mask-image: var(--mask-url);
+    -webkit-mask-repeat: no-repeat;
+    mask-repeat: no-repeat;
+    -webkit-mask-position: center;
+    mask-position: center;
+    -webkit-mask-size: cover;
+    mask-size: cover;
+  }
+}
+
+@layer utilities {
+  /*************
+  * Typography *
+  **************/
+  .title1 {
+    @apply balance-text font-druk text-40 font-bold leading-tight tracking-[2px] md:text-64 lg:text-96 lg:leading-none;
+  }
+
+  .title2 {
+    @apply balance-text font-druk text-32 font-bold leading-tight md:text-36 lg:text-48;
+  }
+
+  .title3 {
+    @apply balance-text font-jetbrains text-24 font-bold leading-snug md:text-32 lg:text-36;
+  }
+
+  .title4 {
+    @apply balance-text font-jetbrains text-18 font-bold leading-snug md:text-20 lg:text-24;
+  }
+
+  .title5 {
+    @apply balance-text font-jetbrains text-18 font-bold leading-snug;
+  }
+
+  /* Used in nav */
+  .title6 {
+    @apply balance-text font-jetbrains text-14 font-bold uppercase leading-4;
+  }
+
+  /* Paragraph Large */
+  .paragraph1 {
+    @apply font-shopify text-18 leading-7 lg:text-16;
+  }
+
+  /* Paragraph Regular */
+  .paragraph2 {
+    @apply font-shopify text-16 leading-snug lg:text-18;
+  }
+
+  /* Paragraph Small */
+  .paragraph3 {
+    @apply font-shopify text-14 leading-snug;
+  }
+
+  .code {
+    @apply font-jetbrains text-16 font-bold leading-tight;
+  }
+
+  .link {
+    @apply font-jetbrains text-16 font-bold leading-tight underline hover:no-underline;
+  }
+
+  .large {
+    @apply paragraph1 m-0 p-0;
+  }
+
+  .small {
+    @apply paragraph3 m-0 p-0;
+  }
+
+  .terminal {
+    @apply font-jetbrains font-bold leading-tight;
+    font-size: clamp(0.5rem, 1.2vw, 0.75rem);
+  }
+
+  .balance-text {
+    -webkit-text-wrap: balance;
+    text-wrap: balance;
+  }
+
+  /************
+  * Rich text *
+  *************/
+  .richtext a {
+    text-decoration: underline;
+    @apply paragraph2;
+  }
+
+  .richtext a:hover {
+    text-decoration: none;
+  }
+
+  .richtext > * + * {
+    @apply mt-40;
+  }
+
+  .richtext iframe {
+    @apply aspect-video h-auto w-full max-w-full;
+  }
+
+  .richtext ul {
+    @apply mb-0 ml-0 mr-0;
+  }
+
+  .richtext li {
+    @apply paragraph2 list-disc;
+    margin: 0.65rem 0 0 2rem;
+  }
+
+  .richtext img {
+    @apply mx-auto block h-auto max-w-full;
+  }
+
+  .richtext pre {
+    @apply !mt-0 !block !max-w-full !font-jetbrains !text-[0.9rem];
+  }
+
+  .richtext h3 {
+    @apply title4 mt-64;
+  }
+
+  .richtext h4 {
+    @apply title5 mt-64;
+  }
+
+  .richtext h5 {
+    @apply title6 mt-64;
+  }
+
+  /************
+  *  Borders  *
+  *************/
+  .border-gradient {
+    border-image-slice: 1;
+  }
+
+  /* TODO - import this gradient value from the backgroundImage overrides */
+  .border-gradient-blue-turquoise {
+    border-image-source: linear-gradient(
+      190deg,
+      oklch(52% 0.278 269) 0%,
+      oklch(88% 0.2 195) 100%
+    );
+  }
+
+  /*********
+  * Layout *
+  **********/
+
+  .container {
+    @apply mx-auto w-full max-w-padded-container px-16 md:px-40;
+  }
+
+  /*******************
+  * Helper utilities *
+  ********************/
+  .no-scroll {
+    @apply fixed w-full overflow-y-scroll;
+  }
+
+  .animation-play-state-paused {
+    animation-play-state: paused;
+  }
+
+  .animation-play-state-running {
+    animation-play-state: running;
+  }
+}

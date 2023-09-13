@@ -10,7 +10,7 @@ import {
   type ShouldRevalidateFunction,
 } from '@remix-run/react';
 import type {Shop} from '@shopify/hydrogen/storefront-api-types';
-import appStyles from './styles/app.css';
+import tailwindCss from './styles/tailwind.css';
 import favicon from '../public/favicon.svg';
 import {useNonce} from '@shopify/hydrogen';
 
@@ -35,7 +35,7 @@ export const shouldRevalidate: ShouldRevalidateFunction = ({
 
 export const links: LinksFunction = () => {
   return [
-    {rel: 'stylesheet', href: appStyles},
+    {rel: 'stylesheet', href: tailwindCss},
     {
       rel: 'preconnect',
       href: 'https://cdn.shopify.com',
@@ -68,8 +68,6 @@ export default function App() {
         <Links />
       </head>
       <body>
-        <h1>Hello, {name}</h1>
-        <p>This is a custom storefront powered by Hydrogen</p>
         <Outlet />
         <ScrollRestoration nonce={nonce} />
         <Scripts nonce={nonce} />
